@@ -1,0 +1,31 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+	Valami
+	<script type="text/javascript">
+		names = new Array();
+		i = 0;
+
+		do {
+			next = window.prompt('Adj meg egy nevet', '');
+			if (next > ' ')
+			{
+				names[i] = next;
+			}
+		
+			i++;
+		}
+		while (next > '' && i<=9);
+		
+		names = names.sort();
+		document.write('<ol>');
+		for (i in names)
+		{
+			document.write('<li>' + names[i] + '</li>')
+		}
+		document.write('</ol>');
+	</script>
+</body>
+</html>
